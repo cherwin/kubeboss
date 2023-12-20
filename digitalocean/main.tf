@@ -9,9 +9,9 @@ resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
   node_pool {
     name       = var.k8s_poolname
     size       = "s-2vcpu-2gb"
-    auto_scale = false
-    node_count = var.k8s_count
-    tags       = ["node-pool-tag"]
+    auto_scale = true
+    min_nodes  = 1
+    max_nodes  = 5
   }
 
 }
