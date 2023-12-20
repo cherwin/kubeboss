@@ -1,3 +1,3 @@
-module "kubernetes" {
-  source = "github.com/cherwin/kubeboss/digitalocean"
+module "kubeboss" {
+  source = "github.com/cherwin/kubeboss//digitalocean?ref=0.1.0"
 }
