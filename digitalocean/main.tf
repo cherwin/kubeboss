@@ -33,6 +33,6 @@ output "kubernetes_token" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.kube_config[0].token
 }
 
-output "kubernetes_cluster_ca_certficate" {
+output "kubernetes_cluster_ca_certificate" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.kube_config[0].cluster_ca_certificate
 }
