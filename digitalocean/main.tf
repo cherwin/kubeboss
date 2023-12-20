@@ -1,5 +1,3 @@
-provider "digitalocean"{}
-
 resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
   name    = var.k8s_clustername
   region  = var.region
