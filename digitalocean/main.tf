@@ -16,6 +16,11 @@ resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
 
 }
 
+resource "local_file" "kubeconfig" {
+  content = digitalocean_kubernetes_cluster.kubernetes_cluster.kube_config[0].raw_config
+  filename = "${path.root}/kubeconfig"
+}
+
 output "cluster-id" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.id
 }
