@@ -20,6 +20,10 @@ resource "local_file" "kubeconfig" {
   filename = "${path.root}/kubeconfig"
 }
 
+output "kubeconfig" {
+  value = "${path.root}/kubeconfig"
+}
+
 output "cluster-id" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.id
 }
@@ -36,3 +40,5 @@ output "kubernetes_token" {
 output "kubernetes_cluster_ca_certificate" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.kube_config[0].cluster_ca_certificate
 }
+
+
