@@ -21,10 +21,6 @@ resource "local_file" "kubeconfig" {
   filename = "${path.root}/kubeconfig"
 }
 
-output "kubeconfig_path" {
-  value = local_file.kubeconfig.path
-}
-
 output "cluster-id" {
   value = digitalocean_kubernetes_cluster.kubernetes_cluster.id
 }
