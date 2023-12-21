@@ -2,8 +2,8 @@ variable "region" {
   default = "ams3"
 }
 
-variable "k8s_clustername" {
-  default = "clusterwim"
+variable "cluster_name" {
+  default = "bosscluster"
 }
 
 variable "k8s_version" {

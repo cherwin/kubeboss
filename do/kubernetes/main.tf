@@ -1,5 +1,5 @@
 resource "digitalocean_kubernetes_cluster" "kubernetes_cluster" {
-  name    = var.k8s_clustername
+  name    = var.cluster_name
   region  = var.region
   version = var.k8s_version
 

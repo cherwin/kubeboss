@@ -1,9 +1,7 @@
-module "kubeboss" {
-  source = "github.com/cherwin/kubeboss//digitalocean?ref=0.1.8"
+module "kubernetes" {
+  source = "github.com/cherwin/kubeboss//do//kubernetes?ref=0.1.9"
 }
 
 module "bootstrap" {
-  source = "github.com/cherwin/kubeboss//kubernetes?ref=0.1.8"
-
-  kubeconfig = module.kubeboss.kubeconfig
+  source = "github.com/cherwin/kubeboss//do//bootstrap?ref=0.1.9"
 }
